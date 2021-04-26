@@ -1,15 +1,16 @@
 ﻿@model BigSchool.ViewModels.CoursesViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_layout.cshtml";
 }
 <h1>Doan xem !!!!!!!!!</h1>
 <div class="row">
     <ul class="course">
-        @foreach(var course in Model.UpcommingCoures )
+        @foreach (var course in Model.UpcommingCoures)
         {
             @*<li>
-                @course.DateTime - @course.Lecturer.Name
-            </li>*@
+                    @course.DateTime - @course.Lecturer.Name
+                </li>*@
             <li>
                 <div class="date">
                     <div class="month">
@@ -22,9 +23,9 @@
                 <div class="details">
                     <span class="lecturer">
                         @course.Lecturer.Name
-                        @if(Model.ShowAction)
-                        { 
-                        <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
+                        @if (Model.ShowAction)
+                        {
+                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
                         }
                     </span>
                     <span class="category">
@@ -66,32 +67,32 @@
                     });
                 });
             });
-            </script>
-        }
+        </script>
+    }
 </div>
 
 @*<ul class="course">
-        @foreach (var course in Model)
-        {
-        <li>
-            <div class="date">
-                <div class="month">
-                    @course.DateTime.ToString("MM")
+            @foreach (var course in Model)
+            {
+            <li>
+                <div class="date">
+                    <div class="month">
+                        @course.DateTime.ToString("MM")
+                    </div>
+                    <div class="day">
+                        @course.DateTime.ToString("dd")
+                    </div>
                 </div>
-                <div class="day">
-                    @course.DateTime.ToString("dd")
+                <div class="details">
+                    <span class="lecturer">
+                        @course.Lecturer.Name
+                    </span>
+                    <span class="category">
+                        @course.Category.Name
+                    </span>
                 </div>
-            </div>
-            <div class="details">
-                <span class="lecturer">
-                    @course.Lecturer.Name
-                </span>
-                <span class="category">
-                    @course.Category.Name
-                </span>
-            </div>
-        </li>
-</ul>*@
+            </li>
+    </ul>*@
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>

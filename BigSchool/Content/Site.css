@@ -8,7 +8,7 @@
 }
 .course > li .date{
     text-align: center;
-    background-color:#d41d50;
+    background-color:#99FF99;
     color: white;
     width: 60px;
     border-radius: 8px;
@@ -18,10 +18,19 @@
     top:0;
     left: 70px;
 }
+.course > li > .action {
+    display: none;
+    left: 70px;
+    position: absolute;
+}
+
+.course > li:hover .action {
+    display: block;
+}
 
 .navbar-inverse {
-    background-color: #650f0f;
-    border-color: #808080;
+    background-color: #99FF99;
+    border-color: #99FF99;
 }
 
 body {
